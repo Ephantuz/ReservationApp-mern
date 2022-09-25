@@ -1,7 +1,7 @@
 import {createSlice,} from '@reduxjs/toolkit'
  
 const initialState = {
-    value: []
+    value: [],
 }
 
 export const reservationsSlice = createSlice({
@@ -10,10 +10,10 @@ export const reservationsSlice = createSlice({
     reducers:{
         addReservation: (state, action) =>{
             state.value.push(action.payload)
-        }
-    }
-})
+        },
+    },
+});
 
 export const {addReservation} = reservationsSlice.actions
 
-export default reservationsSlice.reducer
+export default reservationsSlice.reducer;
