@@ -1,4 +1,4 @@
-import {createSlice} from '@reduxjs/toolkit'
+import {createSlice,} from '@reduxjs/toolkit'
  
 const initialState = {
     value: []
@@ -14,6 +14,6 @@ export const reservationsSlice = createSlice({
     }
 })
 
-export const {addReservation} = reservationsSlice.action
+export const {addReservation} = reservationsSlice.actions
 
 export default reservationsSlice.reducer
