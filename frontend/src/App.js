@@ -1,9 +1,12 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+import { useSelector } from 'react-redux';
 import './App.css';
 
+
 function App() {
+  const reservations = useSelector((state)=> state.reservations.value)
+
+
   return (
     <div className="App">
     <div className="container">
@@ -11,7 +14,7 @@ function App() {
         <div>
           <h5 className="reservation-header">Reservations</h5>
           <div className="reservation-cards-container">
-            <div className="reservation-card-container">Laith Harb</div>
+            <div className="reservation-card-container">Ephatus Mwangi</div>
           </div>
         </div>
         <div className="reservation-input-container">
