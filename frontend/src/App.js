@@ -1,15 +1,23 @@
 import React, {useState} from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import ReservationsHolder from './components/ReservationsHolder';
+import { addReservation } from './features/reservation/reservationsSlice';
 
 
 function App() {
-
-  const [reservationNameInput, setReservationNameInput] = useState("")
-
-
   const reservations = useSelector((state)=> state.reservations.value)
+ 
+  const [reservationNameInput, setReservationNameInput] = useState("")
+  const dispatch= useDispatch() 
+  const handleAddReservations = () =>{
+    if(!reservationNameInput) return
+
+    dispatch(addReservation(reservationNameInput))
+    setReservationNameInput("")
+    
+  }
+
 
 
   return (
@@ -26,7 +34,7 @@ function App() {
         </div>
         <div className="reservation-input-container">
           <input value={reservationNameInput} onChange={ (e)=> setReservationNameInput(e.target.value)}/>
-          <button onClick={}>Add</button>
+          <button onClick={handleAddReservations}>Add</button>
         </div>
       </div>
       <div className="customer-food-container">
