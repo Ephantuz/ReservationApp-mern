@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './App.css';
 import ReservationsHolder from './components/ReservationsHolder';
-import { addReservation } from './features/reservation/reservationsSlice';
+import {addReservation}  from './features/reservation/reservationsSlice';
 
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
           <h5 className="reservation-header">Reservations</h5>
           <div className="reservation-cards-container">
             {reservations.map(name => {
-               return <ReservationsHolder name={name}/> 
+              return <ReservationsHolder name={name}/> 
             })} 
           </div>
         </div>

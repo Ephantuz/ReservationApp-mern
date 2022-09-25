@@ -9,6 +9,7 @@ export const reservationsSlice = createSlice({
     initialState,
     reducers:{
         addReservation: (state, action) =>{
+            console.log("Hello");
             state.value.push(action.payload)
         },
     },
