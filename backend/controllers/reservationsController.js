@@ -9,18 +9,21 @@ const getAllReservations = asyncHandler(async(req, res) =>{
     })
 })
 
+// create new reservations
 const createNewReservation = asyncHandler(async(req, res) =>{
     res.status(201).json({
         message: 'New reservation created'
     })
 })
 
+// update reservations
 const updateReservation = asyncHandler(async(req, res) =>{
     res.status(201).json({
         message: 'Updated reservation'
     })
 })
 
+// delete reservations
 const deleteReservation = asyncHandler(async(req, res) =>{
     res.status(201).jason({
         message: 'deleted a reservation'

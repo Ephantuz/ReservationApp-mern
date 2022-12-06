@@ -10,7 +10,7 @@ const {
 
 
 
-
+//  created  routes for the reservation app.
 router.get('/', getAllReservations)
 router.post('/', createNewReservation)
 router.put('/', updateReservation)
