@@ -89,3 +89,19 @@
     margin-top: 1rem;
     justify-content: space-between;
   }
+
+  .send-button{
+    outline: none;
+    border: 1px solid #625843;
+  }
+
+  .customer-food-input-container button{
+     border: none;
+     color: rgb(204, 230, 230);
+     background: rgb(19, 18, 18);
+     padding: 0.2rem;
+     margin-left: .5rem;
+     font-weight: 500;
+     border-radius: 10px;
+     cursor: pointer;
+  }
