@@ -13,7 +13,7 @@ const {
 //  created  routes for the reservation app.
 router.get('/', getAllReservations)
 router.post('/', createNewReservation)
-router.put('/', updateReservation)
-router.post('/', deleteReservation)
+router.put('/:id', updateReservation)
+router.post('/:id', deleteReservation)
 
 module.exports = router
