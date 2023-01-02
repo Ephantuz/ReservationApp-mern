@@ -19,6 +19,9 @@ app.use(express.urlencoded({ extended: false }))
 // locate routes and render them
 app.use('/api/reservations', require('./routes/reservationRoutes'))
 
+// locate user routes and render them through controllers
+app.use('/api/reservations', require('./routes/reservationRoutes'))
+
 
 // error handler middleware
 app.use(errorHandler)

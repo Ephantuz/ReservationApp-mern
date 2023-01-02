@@ -13,9 +13,8 @@ const getAllReservations = asyncHandler(async (req, res) => {
 const createNewReservation = asyncHandler(async (req, res) => {
     if (!req.body.text) {
 
-        res.status(201).json({
-            message: 'Please add a test field'
-        })
+        res.status(201)
+        throw new Error('Please add a text field!')
     }
     const reservation = await Reservation.create({
         text: req.body.text,
@@ -34,7 +33,7 @@ const updateReservation = asyncHandler(async (req, res) => {
 
 // delete reservations
 const deleteReservation = asyncHandler(async (req, res) => {
-    res.status(201).jason({
+    res.status(201).json({
         message: 'deleted a reservation'
     })
 })
