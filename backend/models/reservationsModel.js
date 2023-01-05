@@ -1,11 +1,11 @@
 const { default: mongoose, mongo } = require("mongoose")
 
 const reservationSchema = mongoose.Schema({
-    // user: {
-    //     type: mongoose.Schema.Types.ObjectId,
-    //     required: true,
-    //     ref: 'User'
-    // },
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true,
+        ref: 'User'
+    },
     text: {
         type: String,
         required: [true, 'please add a reservation']
