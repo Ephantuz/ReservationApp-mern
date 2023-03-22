@@ -23,7 +23,13 @@ const registerUser = expressAsyncHandler(async (req, res) => {
         throw new Error("oops! the user Exist, please use another email")
     }
 
+
     
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+// Hashing password
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    
+
 })
 
 module.exports = {
