@@ -3,7 +3,7 @@ const User = require('../models/userModel')
 
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// REGSTERING NEW USER MODEL "post method"
+// REGISTERING NEW USER MODEL "post method"
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
