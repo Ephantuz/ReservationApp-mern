@@ -36,9 +36,23 @@ const registerUser = expressAsyncHandler(async (req, res) => {
 
 
     // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    // create user
+    // CREATE NEW USER
     // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+    const user = await User.create({
+        name,
+        email,
+        password: hashedPassword
+
+    })
+
+    if (user) {
+        res.status(200).json({
+            _id: user.id,
+            name: user.name,
+            email: user.email
+        })
+    }
 
 })
 
