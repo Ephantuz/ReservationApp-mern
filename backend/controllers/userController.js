@@ -1,5 +1,6 @@
 const expressAsyncHandler = require("express-async-handler");
 const User = require('../models/userModel')
+const bcrypt = require('bcryptjs')
 
 
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -24,11 +25,20 @@ const registerUser = expressAsyncHandler(async (req, res) => {
     }
 
 
-    
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-// Hashing password
-// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-    
+
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // Hashing password
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+    const salt = await bcrypt.genSalt(10)
+    const hashedPassword = await bcrypt.hash(password, salt)
+
+
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    // create user
+    // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 
 })
 
