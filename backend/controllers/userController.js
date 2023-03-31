@@ -52,6 +52,9 @@ const registerUser = expressAsyncHandler(async (req, res) => {
             name: user.name,
             email: user.email
         })
+    } else{
+        res.status(400)
+        throw new Error('Invalid user data')
     }
 
 })
