@@ -8,7 +8,7 @@ const User = require('../models/userModel')
 
 // also,mongodb collection name is enerated here e.g like for  this one, it's ***reservations***---------------------------
 const getAllReservations = asyncHandler(async (req, res) => {
-    const reservations = await Reservation.find({user: req.body.id})
+    const reservations = await Reservation.find({user: req.user.id})
     res.status(200).json(reservations);
 })
 
@@ -30,11 +30,11 @@ const createNewReservation = asyncHandler(async (req, res) => {
 // update reservations
 const updateReservation = asyncHandler(async (req, res) => {
     const reservation = await Reservation.findById(req.params.id)
-    if(!reservation){
+    if (!reservation) {
         res.status(400)
         throw new Error('No reservation found')
     }
-    
+
 })
 
 // delete reservations
